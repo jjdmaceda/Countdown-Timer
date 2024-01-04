@@ -66,6 +66,9 @@
         const countdownDisplay = document.getElementById('countdown');
         const minutes = parseInt(minutesInput.value);
 
+        // set meta title by defaul
+        document.title = `Countdown Timer`;
+
         if (isNaN(minutes) || minutes <= 0) {
             alert('Please enter a valid positive number for minutes.');
             return;
