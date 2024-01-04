@@ -42,7 +42,10 @@
                     <h5 class="card-title text-center">Countdown Timer</h5>
                     <div class="form-group text-center">
                         <label for="minutes">Set Countdown (in minutes): </label>
-                        <input type="number" class="form-control" id="minutes" min="1" value="25">
+                        <select class="form-control" id="minutes">
+                            <option>5</option>
+                            <option>25</option>
+                        </select>
                     </div>
                     <button class="btn btn-primary btn-block" onclick="startCountdown()">Start Countdown</button>
                     <div id="countdown" class="mt-3 text-center countdown-circle"></div>
@@ -91,6 +94,7 @@
             } else {
                 countdownDisplay.classList.remove('countdown-blink');
                 countdownDisplay.style.backgroundColor = '#3498db';
+                countdownDisplay.style.color = 'white';
             }
 
             if (seconds === 0) {
